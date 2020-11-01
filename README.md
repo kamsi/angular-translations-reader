@@ -1,0 +1,1 @@
+# angular-translations-reader
