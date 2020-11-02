@@ -23,7 +23,7 @@ var readdir = (root, filter, files, prefix) => {
   return files
 }
 
-var root = path.join(__dirname, "src");
+var root = path.join(__dirname, "..", "..", "src");
 var filePaths = readdir(root, (name, index, dir) => {
   return name.endsWith(".html") || name.indexOf(".") === -1;
 });
