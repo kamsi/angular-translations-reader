@@ -1,0 +1,24 @@
+{
+  "name": "angular-translations-reader",
+  "version": "1.0.0",
+  "description": "Extracts translation keys from Angular project",
+  "main": "extract-translation-keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamsi/angular-translations-reader.git"
+  },
+  "keywords": [
+    "Angular",
+    "translations",
+    "i18n"
+  ],
+  "author": "Kamil Gruca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamsi/angular-translations-reader/issues"
+  },
+  "homepage": "https://github.com/kamsi/angular-translations-reader#readme"
+}
