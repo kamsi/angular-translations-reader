@@ -42,9 +42,14 @@ filePaths.forEach((fPath) => {
   }
 });
 
-var currentTranslations = new Set(JSON.parse(fs.readFileSync(path.join(root, "assets", "translation-keys.json"), { encoding: "utf8" })));
+var translationsFilePath = path.join(root, "assets", "translation-keys.json");
+if (!fs.existsSync(translationsFilePath)) {
+  translationsFilePath = path.join(root, "assets", "i18n", "translation-keys.json")
+}
+
+var currentTranslations = new Set(JSON.parse(fs.readFileSync(translationsFilePath, { encoding: "utf8" })));
 results.forEach((item) => {
   currentTranslations.add(item);
 });
 
-fs.writeFileSync(path.join(root, "assets", "translation-keys.json"), JSON.stringify(Array.from(currentTranslations), null, 2));
+fs.writeFileSync(translationsFilePath, JSON.stringify(Array.from(currentTranslations), null, 2));

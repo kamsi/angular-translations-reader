@@ -1,6 +1,6 @@
 {
   "name": "angular-translations-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extracts translation keys from Angular project",
   "main": "extract-translation-keys.js",
   "scripts": {
