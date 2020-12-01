@@ -34,10 +34,10 @@ filePaths.forEach((fPath) => {
     return;
   }
   var content = fs.readFileSync(path.join(root, fPath), { encoding: "utf8" });
-  var matches = content.match(/\{\{\n\s*?(('|\").+?('|\"))\s*?\|\s+?translate\s*?\n\}\}/g);
+  var matches = content.match(/\{\{\n*?\s*?(('|").+?('|"))\s*?\|\s+?translate\s*?\n*?\}\}/g);
   if (matches) {
     results = results.concat(matches.map((matched) => {
-      return matched.replace(/^.+(('|\")(.+?)('|\"))\s*?\|\s*?translate.+$/g, "$3");
+      return matched.replace(/\n/g, "").replace(/^.+(('|")(.+?)('|"))\s*?\|\s*?translate.+$/g, "$3");
     }));
   }
 });
